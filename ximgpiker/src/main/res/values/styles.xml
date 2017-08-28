@@ -1,0 +1,16 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <!--<item name="android:windowIsTranslucent">true</item>-->
+    </style>
+    <!--Custom Toolbar Style -->
+    <style name="mToolbarStyle" parent="@style/Widget.AppCompat.Toolbar">
+        <!-- 设置该属性解决Toolbar左边空白 -->
+        <item name="contentInsetStart">0dp</item>
+    </style>
+</resources>
