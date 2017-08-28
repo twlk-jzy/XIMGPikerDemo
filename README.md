@@ -30,8 +30,11 @@ compile'com.twlk:XIMGPiker:1.0.2'
 此项目中引入的第三方依赖库有,感谢
 
 compile'com.jakewharton:butterknife:8.7.0'
+
 compile'com.github.bumptech.glide:glide:3.8.0'
+
 compile'com.android.support:design:25.2.0'
+
 compile'top.zibin:Luban:1.1.2'
 
 
