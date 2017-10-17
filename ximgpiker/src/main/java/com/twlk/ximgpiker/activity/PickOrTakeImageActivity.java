@@ -122,7 +122,7 @@ public class PickOrTakeImageActivity extends BaseActivity implements View.OnClic
     /**
      * 选择图片的数量总数，默认为9
      */
-    private int picNums = 20;
+    private int picNums = 9;
     /**
      * 当前选中的图片数量
      */
@@ -929,7 +929,6 @@ public class PickOrTakeImageActivity extends BaseActivity implements View.OnClic
                 if (picNums > 1) {
                     Intent intent = new Intent();
                     intent.setClass(PickOrTakeImageActivity.this, PickBigImagesActivity.class);
-                    //TODO 这里由于涉及到intent传递的数据不能太大的问题，所以如果需要，这里需要进行另外的处理，写入到内存或者写入到文件中
                     intent.putExtra(PickBigImagesActivity.EXTRA_DATA, getAllImagesFromCurrentDirectory());
                     intent.putExtra(PickBigImagesActivity.EXTRA_ALL_PICK_DATA, picklist);
                     intent.putExtra(PickBigImagesActivity.EXTRA_CURRENT_PIC, position);
@@ -1095,9 +1094,6 @@ public class PickOrTakeImageActivity extends BaseActivity implements View.OnClic
         if (currentPicNums == 0) {
             Toast.makeText(this, getString(R.string.not_choose_any_pick), Toast.LENGTH_SHORT).show();
             return;
-        }
-        if (picNums == 1) {
-            picklist.clear();
         }
         Intent data = new Intent();
         data.putExtra("data", picklist);
